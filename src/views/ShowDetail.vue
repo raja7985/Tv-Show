@@ -45,8 +45,8 @@
                 <span>Status : {{ getTvShowDetail.status }} </span>
               </p>
 
-              <p>Premiered : {{ getTvShowDetail.premiered }}</p>
-              <p>
+              <p v-if="getTvShowDetail.premiered">Premiered : {{ getTvShowDetail.premiered }}</p>
+              <p v-if="getTvShowDetail.runtime">
                 <span>Duration : {{ getTvShowDetail.runtime }} mins</span>
               </p>
               <p>
