@@ -5,16 +5,14 @@
         <router-link to="/" :title="'Go to homepage'">
           <span class="logo_main"
             ><img class="logo_img" src="@/assets/tvImage.png" alt="Tv Shows" />
-            <span class="logo_txt">TV Shows</span></span
-          >
+            <span class="logo_txt">TV Shows</span></span>
         </router-link>
         <v-spacer></v-spacer>
         <v-btn
           aria-label="search"
           icon
           color="white"
-          @click="SET_OVERLAY_ON_SEARCH(!getOverlayOnSearch)"
-        >
+          @click="SET_OVERLAY_ON_SEARCH(!getOverlayOnSearch)">
           <v-icon>{{ searchIcon }}</v-icon>
         </v-btn>
       </v-row>

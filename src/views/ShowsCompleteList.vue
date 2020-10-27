@@ -14,8 +14,7 @@
               threshold: 0,
             }"
             min-height="290"
-            transition="fade-transition"
-          >
+            transition="fade-transition">
           </v-lazy>
         </v-col>
       </v-row>
@@ -26,14 +25,12 @@
             threshold: 0,
           }"
           min-height="360"
-          transition="fade-transition"
-        >
+          transition="fade-transition">
           <v-slide-group multiple show-arrows>
             <v-slide-item
               v-for="show in showsByGenre(genre)"
               :key="'Show ' + show.id"
-              class="pr-4"
-            >
+              class="pr-4">
               <ShowsGenreList :item="show" />
             </v-slide-item>
           </v-slide-group>

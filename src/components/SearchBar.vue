@@ -4,24 +4,22 @@
     :absolute="false"
     opacity="1"
     :value="getOverlayOnSearch"
-    class="search d-flex"
-  >
+    class="search d-flex">
     <div class="search-overlay">
       <div class="d-flex">
         <v-text-field
           autocomplete="off"
           v-model="searchKeyword"
           id="search-field"
-          label="Type minimum 3 characters to search"
-        ></v-text-field>
+          label="Type minimum 3 characters to search">
+        </v-text-field>
         <v-btn
           class="ml-auto"
           icon
           id="close-btn"
           aria-label="close"
           color="white"
-          @click="handleSearch"
-        >
+          @click="handleSearch">
           <v-icon>{{ closeIcon }}</v-icon>
         </v-btn>
       </div>
@@ -32,19 +30,12 @@
             <v-slide-item
               v-for="show in tvShows"
               :key="'Search show ' + show.show.id"
-              class="pr-4"
-            >
+              class="pr-4">
               <ShowsGenreList :item="show.show" />
             </v-slide-item>
           </v-slide-group>
         </div>
-        <div
-          v-if="
-            searchKeyword.length > 2 &&
-            this.searchEnd &&
-            this.tvShows.length == 0
-          "
-        >
+        <div v-if="searchKeyword.length > 2 && this.searchEnd && this.tvShows.length == 0">
           <p>No Tv Shows Found</p>
         </div>
       </div>

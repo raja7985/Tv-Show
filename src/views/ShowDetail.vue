@@ -4,14 +4,12 @@
       threshold: 0.5,
     }"
     transition="fade-transition"
-    class="show-detail"
-  >
+    class="show-detail">
     <v-parallax
       class="details-container"
       v-if="!isDataLoading"
       height="auto"
-      :src="showsBackgroundImage"
-    >
+      :src="showsBackgroundImage">
       <v-container>
         <div class="bookmark-col">
           <router-link to="/" :title="'Go to homepage'">
@@ -37,8 +35,7 @@
                 <span
                   v-for="genre in getTvShowDetail.genres"
                   :key="genre"
-                  class="pr-2"
-                >
+                  class="pr-2">
                   {{ genre }}
                   <div class="connector"></div>
                 </span>
@@ -55,14 +52,8 @@
               <p>
                 <span>Language : {{ getTvShowDetail.language }} </span>
               </p>
-              <p
-                v-if="
-                  getTvShowDetail.officialSite &&
-                  getTvShowDetail.officialSite.length > 0
-                "
-              >
-                <span
-                  >Official Website :
+              <p v-if="getTvShowDetail.officialSite && getTvShowDetail.officialSite.length > 0 ">
+                <span>Official Website :
                   <a :href="getTvShowDetail.officialSite" class="website"
                     >{{ getTvShowDetail.officialSite }}
                   </a>
@@ -71,15 +62,9 @@
               <p v-if="getTvShowDetail.network">
                 <span>Network : {{ getTvShowDetail.network.name }}</span>
               </p>
-              <p
-                v-if="
-                  getTvShowDetail.network && getTvShowDetail.network.country
-                "
-              >
-                <span
-                  >Available In :
-                  {{ getTvShowDetail.network.country.name }}</span
-                >
+              <p v-if="getTvShowDetail.network && getTvShowDetail.network.country" >
+                <span>Available In :
+                  {{ getTvShowDetail.network.country.name }}</span>
               </p>
               <div class="ratings-section" v-if="getTvShowDetail">
                 <div class="rating">
@@ -98,10 +83,8 @@
                 </div>
               </div>
               <div>
-                <span v-if="getTvShowDetail.summary"
-                  >About :
-                  {{ convertHtmlToText(getTvShowDetail.summary) }}</span
-                >
+                <span v-if="getTvShowDetail.summary">About :
+                  {{ convertHtmlToText(getTvShowDetail.summary) }}</span>
               </div>
             </div>
           </v-col>

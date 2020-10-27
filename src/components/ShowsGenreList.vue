@@ -2,15 +2,13 @@
   <div v-if="pageName == 'popular'">
     <router-link
       :to="{ name: 'show', params: { id: item.id } }"
-      :title="'Go to ' + item.name"
-    >
+      :title="'Go to ' + item.name">
       <v-sheet height="300px">
         <v-img
           height="300px"
           v-if="item.image"
           :src="item.image.original"
-          class="topsection-wrapper"
-        >
+          class="topsection-wrapper">
           <v-row align="center" justify="center">
             <v-col cols="10" sm="8" md="8" class="title-section">
               <h1 class="display-2">
@@ -26,8 +24,8 @@
                       color="yellow accent-4"
                       dense
                       length="1"
-                      size="25"
-                    ></v-rating>
+                      size="25">
+                    </v-rating>
                   </span>
                 </p>
               </div>
@@ -41,21 +39,18 @@
     <v-card color="transparent" class="show-card white--text" flat width="200">
       <router-link
         :to="{ name: 'show', params: { id: item.id } }"
-        :title="'Go to ' + item.name"
-      >
+        :title="'Go to ' + item.name">
         <template v-if="item.image != null">
           <v-img
             :alt="item.name"
             :src="item.image ? item.image.original : ''"
-            class="img-dime"
-          />
+            class="img-dime" />
         </template>
         <template v-else>
           <v-img
             :alt="item.name"
             src="@/assets/default-movie.png"
-            class="img-dime"
-          />
+            class="img-dime" />
         </template>
         <header>
           <h3 class="subtitle-1 pt-2">
@@ -70,8 +65,8 @@
             color="yellow accent-4"
             dense
             length="1"
-            size="25"
-          ></v-rating>
+            size="25" >
+          </v-rating>
         </span>
       </router-link>
     </v-card>
