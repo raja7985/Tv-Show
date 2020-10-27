@@ -56,7 +56,7 @@
 <script>
 import { mdiClose } from '@mdi/js'
 import { mapGetters, mapMutations } from 'vuex'
-import { getTvShowsOnSearch } from '@/api/show_search_api'
+import { getTvShowsOnSearch } from '@/api/showSearchApi'
 import ShowsGenreList from './ShowsGenreList.vue'
 export default {
   name: 'SearchBar',

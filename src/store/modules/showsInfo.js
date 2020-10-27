@@ -2,7 +2,7 @@ import {
   getListOfTvShows,
   getShow,
   getTvShowImages
-} from '@/api/tv_shows_info_api'
+} from '@/api/tvShowsInfoApi'
 
 const state = {
   tvshows: [],
