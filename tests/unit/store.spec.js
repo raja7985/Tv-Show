@@ -53,9 +53,7 @@ describe('Store management', () => {
     it('when getTvShowDetails is call should commit SET_TV_SHOW_INFO mutation', async () => {
       const commit = jest.fn()
 
-      shows.actions.getTvShowDetails({
-        commit
-      }, 1).then(() => {
+      shows.actions.getTvShowDetails({ commit }, 1).then(() => {
         expect(commit).toHaveBeenCalledWith('SET_TV_SHOW_INFO', true)
       })
     })
@@ -64,9 +62,7 @@ describe('Store management', () => {
       const commit = jest.fn()
 
       shows.actions
-        .getTvShowDetailImages({
-          commit
-        }, 1)
+        .getTvShowDetailImages({ commit }, 1)
         .then(() => {
           expect(commit).toHaveBeenCalledWith('SET_TV_SHOW_IMAGES', true)
         })
