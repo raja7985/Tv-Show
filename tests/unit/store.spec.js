@@ -46,7 +46,6 @@ describe('Store management', () => {
         commit
       }).then(() => {
         expect(commit).toHaveBeenCalledWith('SET_TV_SHOWS', showsData)
-        expect(commit).toHaveBeenCalledWith('SET_TV_SHOWS', true)
         expect(commit).toHaveBeenCalledWith('SET_SHOWS_GENRES', true)
       })
     })
