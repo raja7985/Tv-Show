@@ -44,9 +44,7 @@ const actions = {
       if (response && response.data) { commit('SET_TV_SHOW_INFO', response.data) }
     })
   },
-  async getTvShowDetailImages ({
-    commit
-  }, id) {
+  async getTvShowDetailImages ({ commit }, id) {
     return getTvShowImages(id).then((response) => {
       if (response && response.data) { commit('SET_TV_SHOW_IMAGES', response.data) }
     })
@@ -58,9 +56,7 @@ const mutations = {
     state.tvshows = data.sort((prevValue, nextValue) => prevValue.rating.average < nextValue.rating.average ? 1 : -1)
   },
   SET_SHOWS_GENRES (state, data) {
-    state.genres = data
-      .reduce((acc, show) => acc.concat(show.genres), [])
-      .filter((genre, index, self) => self.indexOf(genre) === index)
+    state.genres = data.reduce((acc, show) => acc.concat(show.genres), []).filter((genre, index, self) => self.indexOf(genre) === index)
   },
   SET_TV_SHOW_INFO (state, data) {
     state.completeShowInformation = data
