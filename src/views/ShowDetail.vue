@@ -49,7 +49,7 @@
               <p v-if="getTvShowDetail.runtime">
                 <span>Duration : {{ getTvShowDetail.runtime }} mins</span>
               </p>
-              <p>
+              <p v-if="getTvShowDetail.language">
                 <span>Language : {{ getTvShowDetail.language }} </span>
               </p>
               <p v-if="getTvShowDetail.officialSite && getTvShowDetail.officialSite.length > 0 ">
