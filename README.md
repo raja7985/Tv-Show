@@ -1,4 +1,4 @@
-# tv-show
+# tv-shows
 Tv Shows dashboard board displays list by popularity, genres and ratings.Search for you favourite tv shows.
 A web application which allows users to see all the shows based on  genre and  popularity. It uses the following api with base url: https://api.tvmaze.com .
 On the Dashboard, it loads all the shows based on genre and their popularity which depende on the average rating.. However you can search any show, and you will get details regarding the show.
